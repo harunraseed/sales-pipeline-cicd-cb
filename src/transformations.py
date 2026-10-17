@@ -78,6 +78,7 @@ def clean_orders(bronze_df: DataFrame) -> DataFrame:
       4. Drop bad rows: missing ids, bad date, quantity <= 0, price < 0
       5. Remove duplicate order_id
       6. Add amount = quantity * unit_price
+      7. i added this new comment
     """
     typed = bronze_df.select(
         _blank_to_null("order_id").alias("order_id"),
